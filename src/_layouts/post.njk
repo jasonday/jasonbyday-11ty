@@ -1,0 +1,64 @@
+---
+layout: base
+schema: BlogPosting
+---
+<div class="breadcrumb" style="background-color: var(--color-primary)">
+  <nav aria-label="breadcrumb" class="breadcrumb wrapper flow" style="color: var(--color-text-flipped)">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a href="/" class="breadcrumb__link">Home</a><span class="separator" aria-hidden="true">/</span>
+      </li>
+      <li class="breadcrumb__item">
+        <a href="/blog" class="breadcrumb__link">Blog</a><span class="separator" aria-hidden="true">/</span> 
+      </li>
+      <li class="breadcrumb__item" aria-current="page">
+        {{ title }} 
+      </li>
+    </ol>
+  </nav>
+</div>
+<article class="region" style="--region-space-top: var(--space-xl); background-color: var(--color-bg-article)">
+  <div class="wrapper flow prose">
+    {# <h1 class="gradient-text">{{ title }}</h1> #}
+    <h1>{{ title }}</h1>
+
+    {% if image %}
+      <!-- image -->
+      {% image image, alt or title, credit, "eager", "feature" %}
+    {% endif %}
+
+    <p class="meta | cluster gutter-xs-s">
+      <!-- date -->
+      {% set definedDate = date %} {% include "partials/date.njk" %}
+      {%
+        if tags.length >
+        1
+      %}
+        <!-- tags -->
+        {% for tag in tags %}{% if tag != "posts" %}
+          <a class="button" href="/tags/{{ tag }}" data-small-button> {{ tag }} </a>
+        {% endif %}{% endfor %}
+      {% endif %}
+    </p>
+
+    {{ content | safe }}
+    {% include 'partials/edit-on.njk' %}
+  </div>
+
+  <!--  h-card infos: https://indieweb.org/authorship -->
+  <div hidden class="h-entry">
+    <a class="u-url" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
+    <a class="p-name u-url" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
+    <img
+      eleventy:ignore
+      class="u-author h-card"
+      src="{{ meta.author.avatar | url | absoluteUrl(meta.url) }}"
+      alt="{{ meta.author.name }}"
+    />
+  </div>
+</article>
+
+{%- css "local" -%}
+  {%- include 'css/post.css' -%}
+  {%- include 'css/footnotes.css' -%}
+{%- endcss -%}
