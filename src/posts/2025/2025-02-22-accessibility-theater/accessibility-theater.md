@@ -1,5 +1,5 @@
 ---
-title: 'Accessibility Theater: The Cautionary Tale of Overlays'
+title: "Accessibility Theater: The Cautionary Tale of Overlays"
 description: "'Accessibility Theater: The Cautionary Tale of Overlays' takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily."
 discover:
   description: "'Accessibility Theater: The Cautionary Tale of Overlays' takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily. Our story examines how not-so-well intentioned solutions can become mere performance, a facade of accessibility that ultimately fails those it claims to serve."
