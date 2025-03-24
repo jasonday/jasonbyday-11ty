@@ -1,4 +1,4 @@
-export const url = process.env.URL || 'http://localhost:8080';
+export const url = process.env.URL || CF_PAGES_URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
 export const siteName = 'Jason by Day'; // i.e. Lene Saile - the name of the site. Must be set.
