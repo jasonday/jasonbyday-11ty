@@ -1,12 +1,12 @@
 ---
 title: 'Accessibility Theater: The Cautionary Tale of Overlays'
-description: '"Accessibility Theater: The Cautionary Tale of Overlays" takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily.'
+description: "'Accessibility Theater: The Cautionary Tale of Overlays' takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily."
 discover:
-  description: '"Accessibility Theater: The Cautionary Tale of Overlays" takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily. Our story examines how not-so-well intentioned solutions can become mere performance, a facade of accessibility that ultimately fails those it claims to serve.'
+  description: "'Accessibility Theater: The Cautionary Tale of Overlays' takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily. Our story examines how not-so-well intentioned solutions can become mere performance, a facade of accessibility that ultimately fails those it claims to serve."
 date: 2025-02-22
 tags: ['accessibility']
 image: "/posts/2025/2025-02-22-accessibility-theater/robot-widget.png"
-alt: 'A broken robot, electricity sparking and smoking, saying "install me"'
+alt: A broken robot, electricity sparking and smoking, saying 'install me'
 blueskyUri: 'at://did:plc:re2tqdl3vjkgtdwhx2mjixmw/app.bsky.feed.post/3lcgrbxfzr22y'
 ---
 
