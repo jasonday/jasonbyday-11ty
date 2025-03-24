@@ -69,7 +69,7 @@ custom-card :is(a, p, h2, h3) {
 
 custom-card[no-padding] {
   background-color: var(--color-bg-article);
-  border: 2px solid var(--color-text);
+  /* border: 2px solid var(--color-text); */
   padding: var(--space-s-m);
   padding: 0;
   border-radius: 0;
@@ -93,7 +93,7 @@ custom-card[img-square] img {
 
 custom-card[clickable]:hover,
 custom-card[clickable]:focus-within {
-  outline: 2px solid var(--color-primary);
+  outline: 3px solid var(--color-primary);
   outline-offset: 0;
 }
 

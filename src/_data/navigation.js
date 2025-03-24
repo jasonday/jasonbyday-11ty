@@ -1,13 +1,17 @@
 export default {
   top: [
     {
-      text: 'About',
-      url: '/about/'
+      text: 'Home',
+      url: '/'
     },
-    {
-      text: 'Docs',
-      url: '/get-started/'
-    },
+    // {
+    //   text: 'About',
+    //   url: '/about/'
+    // },
+    // {
+    //   text: 'Docs',
+    //   url: '/get-started/'
+    // },
     {
       text: 'Blog',
       url: '/blog/'
@@ -22,9 +26,9 @@ export default {
       text: 'Accessibility',
       url: '/accessibility/'
     },
-    {
-      text: 'Privacy',
-      url: '/privacy/'
-    }
+    // {
+    //   text: 'Privacy',
+    //   url: '/privacy/'
+    // }
   ]
 };

@@ -1,10 +1,12 @@
 ---
 title: 'The Accessibility Blame Game: The Fallacy of the "Lazy Developer"'
-description: 'In the digital accessibility industry, a pervasive narrative persists: "If only developers cared more about accessibility...". But this narrative is unfair, and it misrepresents the real problem. Accessibility failures are rarely about individual laziness; they stem from systemic organizational shortcomings. This article examines why blaming developers is counterproductive and proposes a holistic approach to improving digital accessibility across organizations.'
+description: 'In the digital accessibility industry, a pervasive narrative persists: "If only developers cared more about accessibility...". But this narrative is unfair, and it misrepresents the real problem.'
+discover:
+  description: 'In the digital accessibility industry, a pervasive narrative persists: "If only developers cared more about accessibility...". But this narrative is unfair, and it misrepresents the real problem. Accessibility failures are rarely about individual laziness; they stem from systemic organizational shortcomings. This article examines why blaming developers is counterproductive and proposes a holistic approach to improving digital accessibility across organizations.'
 date: 2025-03-04
 tags: ['accessibility']
 permalink: /blog/the-accessibility-blame-game/
-image: "/posts/2025/2025-03-04-the-accessibility-blame-game/sloth.png"
+image: "/posts/2025/2025-03-04-the-accessibility-blame-game/sloth.jpg"
 imageAlt: "A sloth, sitting at their computer with a bored look, rendered in dark halftone over red"
 feature: true
 ---

@@ -16,21 +16,19 @@ permalink: 'blog/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber
     {# {% svg "divider/edgy", null, "seperator" %} #}
   </header>
 
-  <div class="region flow prose" style="--region-space: var(--space-l)">
+  {# <div class="region flow prose" style="--region-space: var(--space-l)">
     <p>This blog has a pagination of <strong>{{ pagination.size }}</strong> posts per page.<br>
       The pagination is only shown if there are more posts ({{ collections.posts.length }}) than items per
       page ({{ pagination.size }}).
     </p>
-  </div>
+  </div> #}
 
-  <custom-masonry layout="50-50" class="cardItem">
+  <div data-layout="thirds" class="grid cardItem">
   {# <div class="grid" data-layout='50-50'> #}
 		{% asyncEach item in pagination.items %}
 			{% set definedDate = item.date %}
-
 			{% include "partials/card-blog.njk" %}
 		{% endeach %}
-	</custom-masonry>
   </div>
 
   <!-- set collection to paginate -->

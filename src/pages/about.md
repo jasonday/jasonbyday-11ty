@@ -1,9 +1,14 @@
 ---
+draft: true
 title: About
 permalink: /about/index.html
 description: 'Eleventy Excellent is inspired bythe companion website of Andy Bell’s talk "Be the browser’s mentor, not its micromanager".'
 layout: page
 ---
+
+
+
+![Jason Day](/assets/images/template/jason-day-halftone.svg)
 
 This starter uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template.
 

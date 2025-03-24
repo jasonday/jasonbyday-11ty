@@ -4,13 +4,13 @@
   "items": [
     {
       "name": "Display",
-      "description": "Display font stack for headings and large text. Redhat Display is made for headlines and big statements, are low contrast and spaced tightly, with a large x-height and open counters.",
+      "description": "Display font stack for headings and large text. Now in its third version, Literata is a distinct variable font family for digital text. Originally created as the brand typeface for Google Play Books, it exceeds the strict needs of a comfortable reading experience on any device, screen resolution, or font size.",
       "value": ["Literata", "serif"]
     },
     {
       "name": "Base",
-      "description": "Base font stack for body text. Atkinson Hyperlegible, named after the founder of the Braille Institute, has been developed specifically to increase legibility for readers with low vision, and to improve comprehension.",
-      "value": ["Open Sans", "system-ui", "sans-serif"]
+      "description": "Base font stack for body text. Source® Sans Pro, Adobe's first open source typeface family, was designed by Paul D. Hunt. It is a sans serif typeface intended to work well in user interfaces.",
+      "value": ["Source Sans", "sans-serif"]
     },
     {
       "name": "Mono",

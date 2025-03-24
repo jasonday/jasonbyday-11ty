@@ -3,8 +3,9 @@
 }
 
 .post article h1 {
-  font-size: var(--size-step-6);
+  font-size: var(--size-step-5);
   text-align: center;
+  line-height: var(--leading-fine);
 }
 
 .post article h2 {
@@ -67,7 +68,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: var(--size-step-min-1);
+  font-size: var(--size-step-min-2);
 }
 
 li.breadcrumb__item {
