@@ -1,5 +1,5 @@
 ---
-title: 'The State of Web Accessibility 2024%3A What We Can Learn from the WebAIM Million Project'
+title: "The State of Web Accessibility 2024: What We Can Learn from the WebAIM Million Project"
 description: "The 2024 WebAIM Million Project report paints a concerning picture of the current state of web accessibility, while also offering valuable insights into potential improvements."
 date: 2025-02-20
 permalink: /blog/the-state-of-web-accessibility-2024/
