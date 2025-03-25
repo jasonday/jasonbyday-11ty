@@ -1,4 +1,21 @@
-export const url = process.env.URL || process.env.CF_PAGES_URL || 'http://localhost:8080';
+
+
+export const url = (() => {
+  const env = process.env.ELEVENTY_ENV;
+
+  if (env === 'production') {
+    // For production, check if it's the main branch or a preview branch
+    return process.env.CF_PAGES_BRANCH === 'main'
+      ? 'https://jasonbyday.com' // Main branch
+      : process.env.CF_PAGES_URL; // Preview branch
+  } else if (env === 'development') {
+    // For local development
+    return 'http://localhost:8080';
+  }
+
+  // Default fallback
+  return process.env.URL || process.env.SITE_URL || 'http://localhost:8080';
+})();
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
 export const siteName = 'Jason by Day'; // i.e. Lene Saile - the name of the site. Must be set.
