@@ -1,10 +1,10 @@
-<footer class="site-footer mt-l-xl p-s-m">
+<footer class="site-footer mt-l-xl p-s-m h-card">
   <div class="wrapper">
     <div class="cluster gutter-xs">
       <nav class="cluster text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
         &copy; {% year %}
-        <a href="/" {{ indicateActiveHome }}
-          ><span class="font-display">{{ meta.siteName }}</span>
+        <a class="h-card" href="/" {{ indicateActiveHome }}>
+          <span class="font-display u-url">{{ meta.siteName }} <span class="p-name">by Jason Day</span></span>
         </a>
 
         {% for item in navigation.bottom %}
@@ -45,7 +45,7 @@
     <aside class="creator | cluster gutter-2xs text-step-min-1 mt-xl">
       Made with <span class="visually-hidden">love</span> <span>{% svg "misc/heart" %}</span> and
       <a href="https://www.11ty.dev/">{% svg "misc/11ty", "Eleventy" %}</a> by
-      <a rel="me" href="mailto:{{ meta.creator.email }}">{{ meta.creator.name }}</a>
+      <a class="h-card u-email" rel="me" href="mailto:{{ meta.creator.email }}">{{ meta.creator.name }}</a>
     </aside>
   </div>
 </footer>
