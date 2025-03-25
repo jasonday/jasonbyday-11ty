@@ -114,3 +114,10 @@ export const viewRepo = {
   infoText: 'View this page on GitHub'
 };
 export const easteregg = true;
+
+const metadata = {
+  author,
+  domain
+};
+
+export default metadata;

@@ -3,7 +3,7 @@
     <div class="cluster gutter-xs">
       <nav class="cluster text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
         &copy; {% year %}
-        <a class="h-card u-url" href="/" {{ indicateActiveHome }}>
+        <a class="h-card u-url p-org" href="https://jasonbyday.com" {{ indicateActiveHome }}>
           <span class="font-display">{{ meta.siteName }}</span>
         </a>
 
@@ -45,7 +45,7 @@
     <aside class="creator | cluster gutter-2xs text-step-min-1 mt-xl">
       Made with <span class="visually-hidden">love</span> <span>{% svg "misc/heart" %}</span> and
       <a href="https://www.11ty.dev/">{% svg "misc/11ty", "Eleventy" %}</a> by
-      <a class="h-card u-email p-name" rel="me" href="mailto:{{ meta.creator.email }}">{{ meta.creator.name }}</a>
+      <a class="h-card p-name u-email" rel="me" href="mailto:{{ meta.creator.email }}">{{ meta.creator.name }}</a>
     </aside>
   </div>
 </footer>
