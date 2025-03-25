@@ -29,12 +29,16 @@
 }
 
 .post figure:not(.feature) {
-  background: #fff;
   img {
     margin-left: auto;
     margin-right: auto;
     display: block;
   }
+}
+
+.post figure.light-bg picture,
+.post figure.light-bg img {
+  background: #fff;
 }
 
 .post date {
