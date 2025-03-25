@@ -2,10 +2,13 @@
 name = "jasonbyday"
 compatibility_date = "2025-03-24"
 
+[env]
+production = { }
 
-[build.upload_environment_variables]
-CF_PAGES_BRANCH = "CF_PAGES_BRANCH"
-CF_PAGES_URL = "CF_PAGES_URL"
+[build]
+command = "npm run build" # e.g., "npm run build"
+pages_build_output_dir = "dist"
+
 
 [build.environment_variables]
 SITE_URL = { binding = "vars", value = "$SITE_URL" }
