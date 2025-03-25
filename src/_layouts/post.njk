@@ -17,14 +17,14 @@ schema: BlogPosting
     </ol>
   </nav>
 </div>
-<article class="region" style="--region-space-top: var(--space-xl); background-color: var(--color-bg-article)">
-  <div class="wrapper flow prose">
+<article class="region h-entry" style="--region-space-top: var(--space-xl); background-color: var(--color-bg-article)">
+  <div class="wrapper flow prose e-content">
     {# <h1 class="gradient-text">{{ title }}</h1> #}
     <h1 class="feature">{{ title }}</h1>
 
     {% if image %}
       <!-- image -->
-      {% image image, alt or title, credit, "eager", "feature" %}
+      {% image image, alt or title, credit, "eager", "feature u-photo" %}
     {% endif %}
 
     <p class="meta | cluster gutter-xs-s">
@@ -36,22 +36,25 @@ schema: BlogPosting
       %}
         <!-- tags -->
         {% for tag in tags %}{% if tag != "posts" %}
-          <a class="button" href="/tags/{{ tag }}" data-small-button> {{ tag }} </a>
+          <a class="button p-category" rel="tag" href="/tags/{{ tag }}" data-small-button> {{ tag }} </a>
         {% endif %}{% endfor %}
       {% endif %}
     </p>
 
     {{ content | safe }}
     {% include 'partials/edit-on.njk' %}
+    <div class="visually-hidden">
+    {% include 'partials/webmention-list.njk' %}
+    </div>
   </div>
 
   <!--  h-card infos: https://indieweb.org/authorship -->
   <div hidden class="h-entry">
-    <a class="u-url" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
-    <a class="p-name u-url" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
+    <a class="u-url dt-published" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
+    <a class="p-author h-card" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
     <img
       eleventy:ignore
-      class="u-author h-card"
+      class="u-photo h-card"
       src="{{ meta.author.avatar | url | absoluteUrl(meta.url) }}"
       alt="{{ meta.author.name }}"
     />
