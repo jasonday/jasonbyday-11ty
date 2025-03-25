@@ -5,7 +5,6 @@ import {sortAlphabetically} from './filters/sort-alphabetic.js';
 import {splitlines} from './filters/splitlines.js';
 import {striptags} from './filters/striptags.js';
 import {slugifyString} from './filters/slugify.js';
-import { webmentionsForUrl } from './filters/webmention-filters.js';
 
 
 export default {
@@ -16,6 +15,5 @@ export default {
   striptags,
   shuffleArray,
   sortAlphabetically,
-  slugifyString,
-  webmentionsForUrl
+  slugifyString
 };

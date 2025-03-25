@@ -23,6 +23,8 @@ import events from './src/_config/events.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
+import Webmentions from 'eleventy-plugin-webmentions';
+
 
 export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
@@ -68,6 +70,11 @@ export default async function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addPlugin(Webmentions, {
+    domain: "jasonbyday.com",
+    token: "ry240iv7tz8q_GDaKfemTw"
+  });
+
   // ---------------------  bundle
   eleventyConfig.addBundle('css', {hoist: true});
 
@@ -84,8 +91,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('shuffle', filters.shuffleArray);
   eleventyConfig.addFilter('alphabetic', filters.sortAlphabetically);
   eleventyConfig.addFilter('slugify', filters.slugifyString);
-  // WEBMENTIONS FILTER
-  eleventyConfig.addFilter('webmentionsForUrl', filters.webmentionsForUrl);
+
 
   eleventyConfig.addFilter("extractImageName", function(image) {
     if (image) {

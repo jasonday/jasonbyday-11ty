@@ -44,7 +44,7 @@
   src:
     local('Source Sans Extra Bold'),
     local('source-sans-extra-bold'),
-    url('/assets/fonts/source-sans/sources-sans-900.woff2') format('woff2');
+    url('/assets/fonts/source-sans/source-sans-900.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@
   src:
     local('Source Sans Bold'),
     local('source-sans-bold'),
-    url('/assets/fonts/source-sans/sources-sans-700.woff2') format('woff2');
+    url('/assets/fonts/source-sans/source-sans-700.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;

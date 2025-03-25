@@ -1,0 +1,43 @@
+{
+  "lastFetched": "2025-03-25T22:40:04.483Z",
+  "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "????HoagieBear????",
+        "photo": "https://webmention.io/avatar/cdn.bsky.app/444e475737a0da998f58637933bfddb665a2ff1c063b9ce27307c79c8df3f8e1.jpg",
+        "url": "https://bsky.app/profile/sergeanthoagiebear.bsky.social"
+      },
+      "url": "https://bsky.app/profile/jasonbyday.bsky.social/post/3ll6bdez3e22i#liked_by_did:plc:mtnlcegfodaq25najdh7vcyt",
+      "published": null,
+      "wm-received": "2025-03-25T22:00:00Z",
+      "wm-id": 1899058,
+      "wm-source": "https://brid.gy/like/bluesky/did:plc:grgrdxvtzpnrk5ub5wxc2fbd/at%253A%252F%252Fdid%253Aplc%253Agrgrdxvtzpnrk5ub5wxc2fbd%252Fapp.bsky.feed.post%252F3ll6bdez3e22i/did%253Aplc%253Amtnlcegfodaq25najdh7vcyt",
+      "wm-target": "https://jasonbyday.com/blog/the-accessibility-blame-game/",
+      "wm-protocol": "webmention",
+      "like-of": "https://jasonbyday.com/blog/the-accessibility-blame-game/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Disability Daily Podcast",
+        "photo": "https://webmention.io/avatar/cdn.bsky.app/8cf8dd82025dca0c6013841fcbc03278c5956e70b20b28259f3b2c979e6b34f7.jpg",
+        "url": "https://bsky.app/profile/disabilitydaily.bsky.social"
+      },
+      "url": "https://bsky.app/profile/jasonbyday.bsky.social/post/3ll6bdez3e22i#liked_by_did:plc:7uql223a5hdovfakl5e7yn2q",
+      "published": null,
+      "wm-received": "2025-03-25T21:59:41Z",
+      "wm-id": 1899057,
+      "wm-source": "https://brid.gy/like/bluesky/did:plc:grgrdxvtzpnrk5ub5wxc2fbd/at%253A%252F%252Fdid%253Aplc%253Agrgrdxvtzpnrk5ub5wxc2fbd%252Fapp.bsky.feed.post%252F3ll6bdez3e22i/did%253Aplc%253A7uql223a5hdovfakl5e7yn2q",
+      "wm-target": "https://jasonbyday.com/blog/the-accessibility-blame-game/",
+      "wm-protocol": "webmention",
+      "like-of": "https://jasonbyday.com/blog/the-accessibility-blame-game/",
+      "wm-property": "like-of",
+      "wm-private": false
+    }
+  ]
+}
