@@ -39,7 +39,7 @@ class customEasteregg extends HTMLElement {
         answer: 2
       },
       {
-        question: "Links should be used for navigating, and buttons should be used for in page actions?",
+        question: "Generally, links should be used for navigating, and buttons should be used for in page actions?",
         choices: ["1. True", "2. False"],
         answer: 1
       },
