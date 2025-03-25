@@ -2,11 +2,10 @@
 
 export const url = (() => {
   const env = process.env.ELEVENTY_ENV;
-
   if (env === 'production') {
     // For production, check if it's the main branch or a preview branch
-    return process.env.CF_PAGES_BRANCH === 'main'
-      ? 'https://jasonbyday.com' // Main branch
+    return process.env.CF_PAGES_BRANCH === 'main' || !process.env.CF_PAGES_URL
+      ? 'https://jasonbyday.com' // Main branch or CF_PAGES_URL not defined
       : process.env.CF_PAGES_URL; // Preview branch
   } else if (env === 'development') {
     // For local development
@@ -27,9 +26,9 @@ export const skipContent = 'Skip to content';
 export const author = {
   name: 'Jason Day', // i.e. Lene Saile - page / blog author's name. Must be set.
   avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
-  email: 'hello@jasonbyday.com', // i.e. hola@lenesaile.com - email of the author
+  email: 'jasonbyday@outlook.com', // i.e. hola@lenesaile.com - email of the author
   website: 'https://jasonbyday.com', // i.e. https.://www.lenesaile.com - the personal site of the author
-  fediverse: '@jasonday@mastodon.social', // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
+  fediverse: 'https://mastodon.social/@jasonday', // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
   mastodon: 'https://mastodon.social/@jasonday',
   bluesky:'https://bsky.app/profile/jasonbyday.bsky.social',
   linkedin: 'https://linkedin.com/in/jasonbday',
@@ -39,7 +38,7 @@ export const author = {
 };
 export const creator = {
   name: 'Jason Day', // 
-  email: 'hello@jasonbyday.com',
+  email: 'jasonbyday@outlook.com',
   website: 'https://jasonbyday.com',
   social: 'https://bsky.app/profile/jasonbyday.bsky.social'
 };
