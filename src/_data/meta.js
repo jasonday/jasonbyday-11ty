@@ -27,9 +27,9 @@ export const skipContent = 'Skip to content';
 export const author = {
   name: 'Jason Day', // i.e. Lene Saile - page / blog author's name. Must be set.
   avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
-  email: 'jasonbyday@outlook.com', // i.e. hola@lenesaile.com - email of the author
+  email: 'hello@jasonbyday.com', // i.e. hola@lenesaile.com - email of the author
   website: 'https://jasonbyday.com', // i.e. https.://www.lenesaile.com - the personal site of the author
-  fediverse: '@jasonday@a11y.info', // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
+  fediverse: '@jasonday@mastodon.social', // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
   mastodon: 'https://mastodon.social/@jasonday',
   bluesky:'https://bsky.app/profile/jasonbyday.bsky.social',
   linkedin: 'https://linkedin.com/in/jasonbday',
@@ -39,7 +39,7 @@ export const author = {
 };
 export const creator = {
   name: 'Jason Day', // 
-  email: 'jasonbyday@outlook.com',
+  email: 'hello@jasonbyday.com',
   website: 'https://jasonbyday.com',
   social: 'https://bsky.app/profile/jasonbyday.bsky.social'
 };
