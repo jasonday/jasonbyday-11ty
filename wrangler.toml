@@ -15,9 +15,9 @@ CF_PAGES_URL = "CF_PAGES_URL"
 [build.environment_variables]
 SITE_URL = {
   binding = "vars",
-  value = "$CF_PAGES_URL",
-  if = { not = { equals = "main" } } # Default to preview
+  value = "https://jasonbyday.com",
+  if = { equals = "main" } # Override for production
 }
 
 [build.environment_variables.SITE_URL.rules]
-CF_PAGES_BRANCH = { value = "https://jasonbyday.com", if = { equals = "main" } } # Override for production
+CF_PAGES_BRANCH = { value = "$CF_PAGES_URL", if = { not = { equals = "main" } } } # Default to preview
