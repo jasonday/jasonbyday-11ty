@@ -1,16 +1,16 @@
 ---
 title: "Pioneering Progressive Accessibility Testing at Fidelity Investments"
 gallery:
-  - image: ./src/assets/images/projects/FAR/FAR1-workbook.png
+  - image: /assets/images/projects/FAR/FAR1-workbook.png
     alt: 'Fidelity Investments FAR workbook, 1st page'
     caption: 'Fidelity Accessibility Requirements scoring workbook'
-  - image: ./src/assets/images/projects/FAR/FAR1-scores-for-steps.png
+  - image: /assets/images/projects/FAR/FAR1-scores-for-steps.png
     alt: 'Close-up of a delicate white flower with a yellow center, surrounded by green leaves'
     caption: 'Jasmine nightshades blooming in July'
-  - image: ./src/assets/images/projects/FAR/FAR1-worksheet.png
+  - image: /assets/images/projects/FAR/FAR1-worksheet.png
     alt: "A traditional Asturian village with it's raised granaries, surrounded by lush green hills and mountains"
     caption: 'Traditional houses in Santullano, Somiedo Natural Park, Asturias'
-  - image: ./src/assets/images/projects/FAR/FAR1-worksheet-filled.png
+  - image: /assets/images/projects/FAR/FAR1-worksheet-filled.png
     alt: 'Close-up with unfocused background of a vibrant large blue butterfly gracefully perched on a delicate flower amidst lush green grass'
     caption: 'A large blue (Phengaris arion)'
 ---
