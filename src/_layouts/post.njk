@@ -44,20 +44,16 @@ schema: BlogPosting
     {{ content | safe }}
     {% include 'partials/edit-on.njk' %}
 
+
+    <section id="webmentions">
+      <h2>Webmentions</h2>
+   </section>
+
   </div>
-  <div class="webmentions_cont">
-    {# Get the webmentions for the current page #}
-    {%- set currentPostMentions = webmentions | webmentionsForPage -%}
 
-    {# Get the webmentions for a specific page #}
-    {%- set postMentions = webmentions | webmentionsForPage(page.url) -%}
+    
 
-    {# Get the webmention count for the current page #}
-    {%- set currentPostMentionCount = webmentions | webmentionCountForPage -%}
 
-    {# Get the webmention count for a page #}
-    {%- set postMentionCount = webmentions | webmentionCountForPage(page.url) -%}
-  </div>
   <!--  h-card infos: https://indieweb.org/authorship -->
   <div hidden class="h-entry">
     <a class="u-url dt-published" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>

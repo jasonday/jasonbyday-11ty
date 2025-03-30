@@ -16,7 +16,7 @@ If you are working with **VS Code** I recommend installing the "Tailwind CSS Int
 
 The [blog posts](/blog/) also explain / show some features that aren't covered here.
 
-## "Docs" lol
+## Case Studies
 
 <!-- loop docs -->
 {% set itemList = collections.docs %}
