@@ -1,21 +1,21 @@
 ---
 title: "Pioneering Progressive Accessibility Testing at Fidelity Investments"
 gallery:
-  - image: /assets/images/projects/FAR/FAR1-workbook.png
+  - image: /assets/images/projects/FAR/FAR1-workbook.PNG
     alt: 'Fidelity Investments FAR workbook, 1st page'
     caption: 'Fidelity Accessibility Requirements scoring workbook'
-  - image: /assets/images/projects/FAR/FAR1-scores-for-steps.png
+  - image: /assets/images/projects/FAR/FAR1-scores-for-steps.PNG
     alt: 'Close-up of a delicate white flower with a yellow center, surrounded by green leaves'
     caption: 'Jasmine nightshades blooming in July'
-  - image: /assets/images/projects/FAR/FAR1-worksheet.png
+  - image: /assets/images/projects/FAR/FAR1-worksheet.PNG
     alt: "A traditional Asturian village with it's raised granaries, surrounded by lush green hills and mountains"
     caption: 'Traditional houses in Santullano, Somiedo Natural Park, Asturias'
-  - image: /assets/images/projects/FAR/FAR1-worksheet-filled.png
+  - image: /assets/images/projects/FAR/FAR1-worksheet-filled.PNG
     alt: 'Close-up with unfocused background of a vibrant large blue butterfly gracefully perched on a delicate flower amidst lush green grass'
     caption: 'A large blue (Phengaris arion)'
 ---
 
-![Mockup of dashboard for the Fidelity Accessibility Requirements](/assets/images/projects/FAR/FAR-dash.png)
+![Mockup of dashboard for the Fidelity Accessibility Requirements](/assets/images/projects/FAR/FAR-dash.PNG)
 ### FAR, The Fidelity Accessibility Requirements
 
 **My Role**: Principal Accessibility Designer  
