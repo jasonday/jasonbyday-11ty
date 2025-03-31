@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Get started
 permalink: /get-started/index.html
 description: 'You can use this starter as a template for your blog and you are ready to go! But there are some adjustments you have to make.'
@@ -16,7 +15,7 @@ If you are working with **VS Code** I recommend installing the "Tailwind CSS Int
 
 The [blog posts](/blog/) also explain / show some features that aren't covered here.
 
-## "Docs" lol
+## Case Studies
 
 <!-- loop docs -->
 {% set itemList = collections.docs %}

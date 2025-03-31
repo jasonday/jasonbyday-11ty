@@ -77,6 +77,34 @@ export const blog = {
   paginationNext: 'Next',
   paginationNumbers: true
 };
+export const projects = {
+  // RSS feed
+  name: 'Jason by Day',
+  description: "Jason Day's progress in works. Consulting, writing, speaking. Accessibility, inclusive design, and otherwise meandering ramblings.",
+  // feed links are looped over in the head. You may add more to the array.
+  feedLinks: [
+    {
+      title: 'Atom Feed',
+      url: '/feed.xml',
+      type: 'application/atom+xml'
+    },
+    {
+      title: 'JSON Feed',
+      url: '/feed.json',
+      type: 'application/json'
+    }
+  ],
+  // Tags
+  tagSingle: 'Tag',
+  tagPlural: 'Tags',
+  tagMore: 'More tags:',
+  // pagination
+  paginationLabel: 'Projects',
+  paginationPage: 'Project',
+  paginationPrevious: 'Previous',
+  paginationNext: 'Next',
+  paginationNumbers: true
+};
 export const details = {
   aria: 'section controls',
   expand: 'expand all',

@@ -1,30 +1,13 @@
-/**
- * Most adjustments must be made in `./src/_config/*`
- */
-
-/**
- * Configures Eleventy with various settings, collections, plugins, filters, shortcodes, and more.
- * Hint VS Code for eleventyConfig autocompletion.
- * © Henry Desroches - https://gist.github.com/xdesro/69583b25d281d055cd12b144381123bf
- * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig -
- * @returns {Object} -
- */
-
-// register dotenv for process.env.* variables to pickup
+// filepath: c:\Users\movem\OneDrive\Documents\GitHub\jasonbyday-11ty\eleventy.config.js
 import dotenv from 'dotenv';
 dotenv.config();
 
-// add yaml support
 import yaml from 'js-yaml';
-
-//  config import
-import {getAllPosts, showInSitemap, tagList} from './src/_config/collections.js';
+import { getAllPosts, getAllProjects, showInSitemap, tagList } from './src/_config/collections.js';
 import events from './src/_config/events.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
-import Webmentions from 'eleventy-plugin-webmentions';
-
 
 export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
@@ -34,10 +17,12 @@ export default async function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'base.njk');
   eleventyConfig.addLayoutAlias('page', 'page.njk');
   eleventyConfig.addLayoutAlias('post', 'post.njk');
+  eleventyConfig.addLayoutAlias('project', 'project.njk');
   eleventyConfig.addLayoutAlias('tags', 'tags.njk');
 
   //	---------------------  Collections
   eleventyConfig.addCollection('allPosts', getAllPosts);
+  eleventyConfig.addCollection('allProjects', getAllProjects);
   eleventyConfig.addCollection('showInSitemap', showInSitemap);
   eleventyConfig.addCollection('tagList', tagList);
 
@@ -50,7 +35,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
   eleventyConfig.addPlugin(plugins.rss);
   eleventyConfig.addPlugin(plugins.syntaxHighlight);
-  
+
 
   eleventyConfig.addPlugin(plugins.webc, {
     components: ['./src/_includes/webc/*.webc'],
@@ -70,13 +55,8 @@ export default async function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addPlugin(Webmentions, {
-    domain: "jasonbyday.com",
-    token: "ry240iv7tz8q_GDaKfemTw"
-  });
-
   // ---------------------  bundle
-  eleventyConfig.addBundle('css', {hoist: true});
+  eleventyConfig.addBundle('css', { hoist: true });
 
   // 	--------------------- Library and Data
   eleventyConfig.setLibrary('md', plugins.markdownLib);
@@ -92,8 +72,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('alphabetic', filters.sortAlphabetically);
   eleventyConfig.addFilter('slugify', filters.slugifyString);
 
-
-  eleventyConfig.addFilter("extractImageName", function(image) {
+  eleventyConfig.addFilter("extractImageName", function (image) {
     if (image) {
       const parts = image.split(".");
       const nameParts = parts[0].split("/");

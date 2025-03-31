@@ -1,0 +1,81 @@
+.project article {
+  margin-block-start: 0;
+}
+
+.project article h1 {
+  font-size: var(--size-step-5);
+  text-align: center;
+  line-height: var(--leading-fine);
+}
+
+.project article h2 {
+  font-size: var(--size-step-4);
+}
+
+.project article h3 {
+  font-size: var(--size-step-3);
+}
+
+/* make featured image alwyays 16/9 */
+.project h1 + :is(picture, figure) img {
+  max-inline-size: var(--max-img-width, 100%);
+  block-size: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.project figure:not(.feature) {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.project figure.light-bg picture,
+.project figure.light-bg img {
+  background: #fff;
+}
+
+.project date {
+  font-size: var(--size-step-1);
+  color: var(--color-text-light);
+}
+
+.project .credit {
+  font-size: var(--size-step-min-1);
+  color: var(--color-text-accent);
+  background-color: var(--color-bg);
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--border-radius-medium);
+  transform: translateY(-4ch) translateX(-0.5ch);
+  max-inline-size: fit-content;
+}
+
+.project .meta {
+  font-size: var(--size-step-min-1);
+}
+
+.project .breadcrumb {
+  padding: .25rem 0;
+}
+
+.project .breadcrumb__list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--size-step-min-2);
+}
+
+li.breadcrumb__item {
+  display: flex;
+  gap: .25rem;
+}

@@ -2,21 +2,7 @@
 layout: base
 schema: BlogPosting
 ---
-<div class="breadcrumb" style="background-color: var(--color-primary)">
-  <nav aria-label="breadcrumb" class="breadcrumb wrapper flow" style="color: var(--color-text-flipped)">
-    <ol class="breadcrumb__list">
-      <li class="breadcrumb__item">
-        <a href="/" class="breadcrumb__link">Home</a><span class="separator" aria-hidden="true">/</span>
-      </li>
-      <li class="breadcrumb__item">
-        <a href="/blog" class="breadcrumb__link">Blog</a><span class="separator" aria-hidden="true">/</span> 
-      </li>
-      <li class="breadcrumb__item" aria-current="page">
-        {{ title }} 
-      </li>
-    </ol>
-  </nav>
-</div>
+
 <article class="region h-entry" style="--region-space-top: var(--space-xl); background-color: var(--color-bg-article)">
   <div class="wrapper flow prose e-content">
     {# <h1 class="gradient-text">{{ title }}</h1> #}
@@ -26,24 +12,22 @@ schema: BlogPosting
       <!-- image -->
       {% image image, alt or title, credit, "eager", "feature u-photo" %}
     {% endif %}
-
-    <p class="meta | cluster gutter-xs-s">
-      <!-- date -->
-      {% set definedDate = date %} {% include "partials/date.njk" %}
+      
       {%
         if tags.length >
         1
       %}
+      <p class="meta | cluster gutter-xs-s">
         <!-- tags -->
-        {% for tag in tags %}{% if tag != "posts" %}
+        {% for tag in tags %}{% if tag != "projects" %}
           <a class="button p-category" rel="tag" href="/tags/{{ tag }}" data-small-button> {{ tag }} </a>
         {% endif %}{% endfor %}
+         </p>
       {% endif %}
-    </p>
+   
 
     {{ content | safe }}
     {% include 'partials/edit-on.njk' %}
-
 
 
   </div>
@@ -65,6 +49,6 @@ schema: BlogPosting
 </article>
 
 {%- css "local" -%}
-  {%- include 'css/post.css' -%}
+  {%- include 'css/project.css' -%}
   {%- include 'css/footnotes.css' -%}
 {%- endcss -%}
