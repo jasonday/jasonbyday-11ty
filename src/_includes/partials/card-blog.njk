@@ -13,7 +13,9 @@
     <a href="{{ item.url | url }}">{{ item.data.title }}</a>
   </h2>
   {% endif %}
-  <span slot="date"> {% include "partials/date.njk" %} </span>
+  {% if item.date %}
+    <span slot="date"> {% include "partials/date.njk" %} </span>
+    {% endif %}
   {%
     if
     item.data.tags.length > 1

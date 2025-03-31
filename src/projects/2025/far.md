@@ -1,5 +1,9 @@
 ---
-title: "Pioneering Progressive Accessibility Testing at Fidelity Investments"
+title: FAR, The Fidelity Accessibility Requirements
+description: "The Fidelity Accessibility Requirements (FAR) framework I developed at Fidelity Investments stands as an innovative approach in digital accessibility. Unlike traditional methods that overwhelm teams with exhaustive WCAG criteria, FAR's tiered structure empowered product teams to own accessibility testing."
+date: 2025-03-04
+image: "/assets/images/projects/FAR/FAR-dash.PNG"
+imageAlt: "Mockup of dashboard for the Fidelity Accessibility Requirements"
 gallery:
   - image: /assets/images/projects/FAR/FAR1-workbook.PNG
     alt: 'Fidelity Investments FAR workbook, 1st page'
@@ -15,8 +19,9 @@ gallery:
     caption: 'A large blue (Phengaris arion)'
 ---
 
-![Mockup of dashboard for the Fidelity Accessibility Requirements](/assets/images/projects/FAR/FAR-dash.PNG)
-### FAR, The Fidelity Accessibility Requirements
+
+
+## Pioneering Progressive Accessibility Testing at Fidelity Investments
 
 **My Role**: Principal Accessibility Designer  
 **My Contributions**: Led program management, conducted user research, authored the Fidelity Accessibility Requirements (FAR) framework  
