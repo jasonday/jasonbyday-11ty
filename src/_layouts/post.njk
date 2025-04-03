@@ -24,7 +24,7 @@ schema: BlogPosting
 
     {% if image %}
       <!-- image -->
-      {% image image, alt or title, credit, "eager", "feature u-photo" %}
+      {% image image, imageAlt or title, credit, "eager", "feature u-photo" %}
     {% endif %}
 
     <p class="meta | cluster gutter-xs-s">
@@ -43,8 +43,6 @@ schema: BlogPosting
 
     {{ content | safe }}
     {% include 'partials/edit-on.njk' %}
-
-
 
   </div>
 
