@@ -2,7 +2,21 @@
 layout: base
 schema: BlogPosting
 ---
-
+<div class="breadcrumb" style="background-color: var(--color-primary)">
+  <nav aria-label="breadcrumb" class="breadcrumb wrapper flow" style="color: var(--color-text-flipped)">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a href="/" class="breadcrumb__link">Home</a><span class="separator" aria-hidden="true">/</span>
+      </li>
+      <li class="breadcrumb__item">
+        <a href="/projects" class="breadcrumb__link">Projects</a><span class="separator" aria-hidden="true">/</span> 
+      </li>
+      <li class="breadcrumb__item" aria-current="page">
+        {{ title }} 
+      </li>
+    </ol>
+  </nav>
+</div>
 <article class="region h-entry" style="--region-space-top: var(--space-xl); background-color: var(--color-bg-article)">
   <div class="wrapper flow prose e-content">
     {# <h1 class="gradient-text">{{ title }}</h1> #}
@@ -10,7 +24,7 @@ schema: BlogPosting
 
     {% if image %}
       <!-- image -->
-      {% image image, alt or title, credit, "eager", "feature u-photo" %}
+      {% image image, imageAlt or title, credit, "eager", "feature u-photo" %}
     {% endif %}
       
       {%

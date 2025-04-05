@@ -71,7 +71,7 @@ To track progress and measure the effectiveness of FAR, a scoring mechanism was 
 
 This scoring system enabled teams and leadership to monitor progress over time and provided a quantifiable metric for accessibility testing performance. This ultimately led to the introduction of an accessibility score/report card, for measurement over time.
 
-{% include "partials/gallery.njk" %}
+{% include 'partials/gallery.njk' %}
 
 
 ### Process
