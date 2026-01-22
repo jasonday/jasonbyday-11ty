@@ -11,101 +11,167 @@ blueskyUri: 'at://did:plc:re2tqdl3vjkgtdwhx2mjixmw/app.bsky.feed.post/3lcgrbxfzr
 ---
 
 
+**Update 1/22/2026:** To make this article clearer and more actionable, and frankly more readable, I've whittled down the lengthy "play", which was a bit of self-indulgence, and expanded the explanation of why accessibility overlays amount to accessibility theater.
+
+---
+
 ## Introduction
-Good evening, and welcome to Masterpiece Digital Theater. Tonight we present a compelling drama that explores the world of digital accessibility - or rather, its charlatan counterfeits.
+Digital accessibility has never been more essential, but as organizations scramble to meet legal requirements, many are sold on and reach for what is advertised as the quickest solution available - an accessibility overlay, or widget. 
 
-"Accessibility Theater: The Cautionary Tale of Overlays" takes us into the modern boardrooms and living rooms where the drama of digital inclusion, or exclusion, plays out daily. Our story examines how not-so-well intentioned solutions can become mere performance, a facade of accessibility that ultimately fails those it claims to serve.
+Overlays promise [full WCAG compliance](https://www.ftc.gov/legal-library/browse/cases-proceedings/2223156-accessibe-inc), AI-powered fixes, and one-line-of-code miracles, and for organizations that are under pressure, it's a tempting pitch. Critics rightfully point out that these tools often interfere with assistive technology and raise serious privacy concerns, but behind those technical failures lies a harder truth. Overlays are accessibility theater. They create the appearance of inclusion without actually delivering it.
 
-A play in three acts...
+To understand what an overlay is, what it tries to do, and why it's harmful beyond the reasons laid out here, get more info at [overlayfactsheet.com](https://overlayfactsheet.com/)
 
-## Characters
+## What Makes Overlays "Accessibility Theater"?
 
-*   WEBSITE OWNER: A well-meaning but uninformed business owner
-*   OVERLAY VENDOR: A smooth-talking sales rep
-*   ANGELA: A blind screen reader user
-*   MARCUS: A web developer with accessibility expertise
-*   CHORUS OF USERS: Various people with disabilities
-*   THE GHOST OF ACCESSIBILITY PAST: A spectral figure representing early web accessibility efforts
-*   WIDGET: A personified accessibility overlay widget
+Overlays don’t solve accessibility issues; they mask them. They're performative and here's why that matters. 
 
-## Act I: The Promise
+### 1. They treat symptoms, not causes
 
-*Scene: A modern office. WEBSITE OWNER sits at their desk, looking worried over their desk*
+Overlays sit on top of inaccessible code. They can't repair broken markup, missing labels, inaccessible forms, complex widgets, or PDFs. They create the illusion of improvement without addressing the root issues.
 
-WEBSITE OWNER: *(reviewing papers)* These accessibility requirements... the lawsuits... the costs... What am I supposed to do?
+Because overlays attempt to guess what needs fixing and how to fix it, they can't consistently address problems in any meaningful way. They don't understand context and frequently get things wrong.
 
-*( OVERLAY VENDOR appears in a cloud of smoke wearing a flashy suit with a glowing "Install Now" button as a tie pin)*
+![Head and shoulders portrait of George Washington](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gilbert-Stuart_Williamstown_Portrait_of_George_Washington.jpg/250px-Gilbert-Stuart_Williamstown_Portrait_of_George_Washington.jpg)
 
-OVERLAY VENDOR: Did someone say accessibility? Fear not! With just one line of code, I can make all your problems disappear!
+Take this portrait of George Washington. AI-generated alt text from several overlay tools produces something like:
 
-WEBSITE OWNER: One line of code? That sounds too good to be true!
+> Portrait of an older man with white hair, wearing a dark coat and white ruffled shirt, set against a dark background.
 
-OVERLAY VENDOR: *(grandly)* Watch this! *(waves a wand)* This little beauty, powered by cutting-edge AI, fixes everything. Fonts, contrast, screen reader compatibility – you name it!
+Which is technically accurate, but completely meaningless. Alt text should align with context and author intent:
+* Wikipedia uses "Head and shoulders portrait of George Washington" which is succinct and accurate.
+* An article about the portrait artist might use: "The Williamstown Portrait of George Washington painted by Gilbert Stuart in 1803"
+* An article about the wearing of wigs in colonial American politics might use: "Portrait of George Washington with his natural powdered hair"
 
-*\[A glowing widget appears on the stage]*
+Context matters. Overlays can't provide it because they don't understand context, users tasks, or business goals. They apply generic fixes to specific problems, which may or may not address the needs of users. 
 
-WIDGET: *(mechanical voice)* I can change fonts! Adjust contrast! Read text aloud! I am the future of accessibility!
+**What this means for you:** You're paying for a solution that doesn't actually solve the problem. The underlying barriers are still there and so is the legal risk.
 
-WEBSITE OWNER: Does this really work?
+### 2. They promise compliance they can't deliver
 
-OVERLAY VENDOR: Trust me. Automation is the future! Why waste time and money when you can have instant results?
+Overlay vendors often make bold claims such as "complete protection", "WCAG compliance", and "full ADA compliance", but accessibility isn't something you can fix with a script. 
 
-## Act II: The Reality
+Accessibility ([WCAG conformance](https://www.boia.org/blog/the-difference-between-accessibility-compliance-and-accessibility-conformance) and usability) requires building it into the foundation of a site through semantic HTML, proper heading structures, keyboard navigation that makes sense, forms that screen readers can parse, images with meaningful alternative text, and interactive components that announce their state and purpose. It means testing with actual users who rely on assistive technology and fixing what breaks.
 
-*Scene: A small office. ANGELA sits at her computer, trying to use the website.*
+An overlay can't do all of this. An overlay cannot restructure poor HTML or add authentic meaning where none exists. Although some tools attempt to programmatically create logical relationships between elements, because they rely on automated guesswork, they may apply incorrect semantics or add features that make the site unusable for people with disabilities. At best, an overlay offers a superficial layer of cosmetic changes. At worst, it creates new barriers that didn't exist before.
 
-ANGELA: *(frustrated)* Ugh, another one of these things? “This site is now accessible!” Yeah, right. I can’t even find the damn menu. My screen reader’s going haywire.
+Where overlays excel is at creating the appearance of action through widgets, dashboards, and compliance reports. This allows organizations to check a box and claim that accessibility has been addressed. This is theater. It's equivalent to the person that looks busy at work, but isn't getting anything done. These overlays give the appearance of inclusion without actual action. 
 
-CHORUS OF USERS: *(entering from all sides, voices overlapping)* “I already have my own tools!”**,** “This widget’s blocking everything!”, “It’s making things worse!”, “And it's tracking my data?”
+**What this means for you:** The compliance protection you paid for doesn't exist. When legal issues arise, and they likely will if your site remains inaccessible, the overlay won't protect you. Courts and plaintiffs don't care that you installed a widget. They care whether your site actually works for people with disabilities.
 
-*\[WIDGET starts glitching]*
+### 3. They may increase legal risk
 
-WIDGET: *(stuttering)* Detecting... detecting... user preferences... Would you like to... Would you like to... Would you like to...
+Organizations install overlays to reduce legal exposure, but it may be doing the opposite.
 
-*(Enter THE GHOST OF ACCESSIBILITY PAST)*
+According to UsableNet, [25% of all accessibility lawsuits in 2025](https://blog.usablenet.com/ada-web-lawsuit-trends-2026) cited overlays alongside the specific barriers. Law firms that specialize in accessibility litigation may be using the presence of overlays as evidence that a company opted for a shortcut instead of genuine remediation.
 
-GHOST: Remember when we said accessibility should be built in, not bolted on? When we wrote the WCAG guidelines way back in 1999? When we emphasized user testing? Remember...?
+Consider the optics in court. By implementing an overlay, an organization understands that accessibility is required/important, and that their site has barriers, but instead of fixing those barriers, the organization installed a widget that the plaintiff's legal team can demonstrate doesn't actually provide access. The overlay becomes documentation of the decision to avoid implementing accessibility at a fundamental level. 
 
-## Act III: The Awakening
+**What this means for you:** Choosing to install an overlay to protect your organization may actually be making you a more attractive target for litigation. Besides failing to reduce risk, you're potentially increasing it while paying for the privilege.
 
-*Scene: Back in WEBSITE OWNER's office. WEBSITE OWNER is meeting with MARCUS.*
+### 4. They delay real progress
 
-MARCUS: The overlay can't fix most issues. It can't reliably repair:
+Perhaps the biggest harm of overlays is what they prevent, which is fundamental accessibility improvements.
 
-*   Image descriptions
+When an organization installs an overlay, the urgency disappears because the problem appears solved. Instead of fostering a culture of inclusion, the presence of a widget often reduces accessibility to a low-priority task that remains at the bottom of the development backlog, or removes it's consideration entirely. Budget conversations shift. Timelines extend. Product teams move on to other priorities. After all, with a widget now on the site, isn't that enough?.
 
-*   Form labels
+It's not. Not only do overlays fail to fix accessibility, but they also actively delay it. They allow an organization to play act at accessibility without committing resources. They turn accessibility into an add-on rather than a fundamental practice woven into design and development.
 
-*   Keyboard navigation
+Real accessibility inclusion requires investment in time, expertise, cultural change, and a commitment to doing things right from the start. Overlays offer an attractive shortcut that actually doesn't go anywhere.
 
-*   Complex interactive components
+**What this means for you:** Every day spent relying on an overlay is a day the actual work isn't happening. You are not just paying for something that doesn't work; you are paying to delay the solution that would. The gap between where you are and where you need to be grows wider, the eventual remediation becomes more expensive, and your legal risk compounds.
 
-*   PDFs, documents, or media files
+## The Bottom Line
 
-WEBSITE OWNER: But the vendor promised compliance!
+Overlays promise protection, compliance, and accessibility. But it's a perfomance, ineffective or redundant at best and harmful at worst. 
 
-*\[CHORUS OF USERS returns, each holding up their phones and laptops]*
+For decision makers evaluating accessibility solutions, the question isn't whether overlays are perfect, it's whether they deliver the intended result of a legally compliant, accessible website that serves all users.
 
-CHORUS OF USERS: "We've started blocking these overlays!" "They collect our disability status without consent!" "They slow down pages!" "They break the tools we use!"
+The answer is no. And that's not just an accessibility problem—it's a business problem.
 
-WEBSITE OWNER: *(to OVERLAY VENDOR)* You promised a solution, but it's all theater – a mere illusion of accessibility!
+Avoid paying for this particular kind of theater. It's not entertaining. 
 
-OVERLAY VENDOR: *(backing away)* But our AI... our automation... our one line of code...
+### Addendum: What About AI?
+Many overlay vendors tout their artificial intelligence or machine learning. Their pitch is compelling and suggests that AI can detect and fix accessibility issues automatically, making overlays smarter and more effective than ever before.
 
-MARCUS: Real accessibility takes work. Human work. Good design, proper coding, and actual user testing. There are no shortcuts.
+This does not change the fundamental problem.
 
-## Epilogue
+Artificial intelligence, or Large Language Models, do have the potential to improve digital accessibility, but that potential is not realized by layering them on top of inaccessible code. The same limitations apply. AI may struggle to restructure poor HTML or fully grasp context, and cannot replace human judgment regarding what makes an experience genuinely accessible.
 
-*\[All characters face the audience]*
+Where AI may actually help is in two different applications:
 
-ANGELA: True accessibility inclusion doesn’t come from an overlay.
+**As a development tool:** AI can assist developers during the building process by suggesting semantic markup and identifying potential issues before they ship. This approach allows AI to support the creation of accessible code from the start rather than attempting to fix broken code after the fact.
 
-MARCUS: It's a fundamental right.
+**As a user-facing assistant:** AI could power intelligent interfaces that adapt to individual needs in real time. Rather than relying on generic accessibility modes, personalized microinteractions could learn from and respond to how someone actually navigates a site. While this is still largely theoretical, it represents a fundamentally different approach than the static nature of an overlay.
 
-WEBSITE OWNER: *(removing the overlay code)* We have to do this the right way.
+The key difference is that in both cases, AI is a tool that enhances human work instead of acting as a replacement for doing the work correctly. 
 
-CHORUS OF USERS: *(together)* No more theater. No more overlays. Just thoughtful, accessible design.
+
+
+## Accessibility Theater: The Cautionary Tale of Overlays
+And speaking of something that's not entertaining, here's a revised version of the play I wrote prior. 
+
+Welcome to Masterpiece Digital Theater. Tonight we present a compelling drama that explores the world of digital accessibility - or rather, its charlatan counterfeits.
+
+"Accessibility Theater: The Cautionary Tale of Overlays" takes us into the modern boardrooms where the drama of digital inclusion, or exclusion, plays out daily. Our story examines how not-so-well intentioned solutions can become mere performance, a facade of accessibility that ultimately fails those it claims to serve.
+
+
+**Characters:**
+
+*   **EXECUTIVE** — wants accessibility, mostly wants it cheap
+    
+*   **OVERLAY** — flashy, overconfident, allergic to real work
+    
+*   **CHORUS OF USERS** — people with disabilities
+    
+*   **ENGINEER** — the reality check
+    
+
+### **Scene: A Boardroom, Mid‑Panic**
+
+EXECUTIVE stares at a stack of accessibility requirements.
+
+**EXECUTIVE:** 
+> There’s no way we can fix all this.
+
+A glittery cloud appears. The OVERLAY leaps out wearing a sparkly jacket.
+
+**OVERLAY:** 
+> Sure you can! One line of code — instant accessibility!
+
+**EXECUTIVE:** 
+> One line? Sign me up.
+
+The OVERLAY tap‑dances across an imaginary website, tossing sparkling cards labeled “AI,” “Automation,” and “Compliance.”
+
+**OVERLAY:** 
+> Behold! Fonts fixed! Contrast corrected! Screen readers tamed!
+
+CHORUS OF USERS enters, unimpressed.
+
+**CHORUS OF USERS:** 
+> My screen reader can’t get past your pop‑up.
+> 
+> The layout’s still unreadable.
+> 
+> Keyboard navigation is a disaster.
+
+The OVERLAY tap‑dances harder. A bead of sweat appears on it's brow. Nothing improves.
+
+ENGINEER steps forward, holding the overlay’s “one line of code” card with a confused look on their face.
+
+**ENGINEER:** 
+> This isn’t accessibility. You can’t override bad code with… jazz hands.
+
+The OVERLAY attempts a final jazz hand. It fizzles out.
+
+EXECUTIVE sighs.
+
+**EXECUTIVE:** 
+> Alright. Point made.
+
+Lights fade. Curtain.
 
 \[End]
 
-Get more info at [overlayfactsheet.com](https://overlayfactsheet.com/)
+
