@@ -43,7 +43,7 @@ Which is technically accurate, but completely meaningless. Alt text should align
 * An article about the portrait artist might use: "The Williamstown Portrait of George Washington painted by Gilbert Stuart in 1803"
 * An article about the wearing of wigs in colonial American politics might use: "Portrait of George Washington with his natural powdered hair"
 
-Context matters. Overlays can't provide it because they don't understand context, users tasks, or business goals. They apply generic fixes to specific problems, which may or may not address the needs of users. 
+Context matters. Overlays can't provide it because they don't understand context, user tasks, or business goals. They apply generic fixes to specific problems, which may or may not address the needs of users. 
 
 **What this means for you:** You're paying for a solution that doesn't actually solve the problem. The underlying barriers are still there and so is the legal risk.
 
