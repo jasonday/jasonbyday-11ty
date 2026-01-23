@@ -2,7 +2,7 @@
 {% if mention %}
   {% set mentionType = mention['wm-property'] %}
   
-  {% if mentionType == 'in-reply-to' %}
+  {% if mentionType == 'in-reply-to' or mentionType == 'mention-of' %}
     {# Reply/Comment #}
     <div class="webmention webmention--reply">
       {% if mention.author %}
@@ -27,13 +27,17 @@
         </h4>
         
         {% if mention.published %}
-          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+          <time class="webmention__date" datetime="{{ mention.published }}">
             {{ mention.published | formatDate('MMM D, YYYY') }}
           </time>
         {% endif %}
         
         {% if mention.content %}
-          <p class="webmention__text">{{ mention.content.text }}</p>
+          {% if mention.content.html %}
+            <div class="webmention__text">{{ mention.content.html | safe }}</div>
+          {% else %}
+            <p class="webmention__text">{{ mention.content.text }}</p>
+          {% endif %}
         {% endif %}
         
         <a href="{{ mention.url }}" class="webmention__source-link">View on source</a>
@@ -83,12 +87,8 @@
         
         {% if mentionType == 'repost-of' %}
           <p class="webmention__action">Shared this</p>
-        {% elif mentionType == 'bookmark-of' %}
-          <p class="webmention__action">Bookmarked this</p>
-        {% endif %}
-        
         {% if mention.published %}
-          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+          <time class="webmention__date" datetime="{{ mention.published }}">
             {{ mention.published | formatDate('MMM D, YYYY') }}
           </time>
         {% endif %}
@@ -120,10 +120,14 @@
         </h4>
         
         {% if mention.published %}
-          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+          <time class="webmention__date" datetime="{{ mention.published }}">
             {{ mention.published | formatDate('MMM D, YYYY') }}
           </time>
         {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}endif %}
       </div>
     </div>
   {% endif %}
