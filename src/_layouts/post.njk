@@ -60,6 +60,18 @@ schema: BlogPosting
       alt="{{ meta.author.name }}"
     />
   </div>
+
+  <div class="webmentions_cont">
+    {# Get the webmentions for the current page #}
+    {%- set currentPostMentions = webmentions | webmentionsForPage -%}
+    <ol id="webmentions">
+      {% for webmentionsForPage in webmentions %}
+          <li class="webmentions__item">
+              {% include 'webmention.njk' %}
+          </li>
+      {% endfor %}
+    </ol>
+  </div>
 </article>
 
 {%- css "local" -%}
