@@ -79,3 +79,40 @@ li.breadcrumb__item {
   display: flex;
   gap: .25rem;
 }
+
+/* Webmentions styles */
+
+.post .webmention--reply {
+  border-top: 1px solid var(--color-bg-accent-2);
+  padding-block-start: var(--space-s);
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: var(--space-xs);
+  font-size: var(--size-step-min-1);
+}
+
+.post .webmention--reply .webmention__avatar,
+.post .webmention--like .webmention__avatar {
+  width: 100%;
+  max-inline-size: 4rem;
+  clip-path: circle(50% at 50% 50%);
+  overflow: hidden;
+}
+
+.post .webmentions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.post .webmentions__likes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -44,34 +44,19 @@ schema: BlogPosting
     {{ content | safe }}
     {% include 'partials/edit-on.njk' %}
 
-  </div>
+    <!-- webmentions -->
 
-    
-
-
-  <!--  h-card infos: https://indieweb.org/authorship -->
-  <div hidden class="h-entry">
-    <a class="u-url dt-published" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
-    <a class="p-author" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
-    <img
-      eleventy:ignore
-      class="u-photo"
-      src="{{ meta.author.avatar | url | absoluteUrl(meta.url) }}"
-      alt="{{ meta.author.name }}"
-    />
-  </div>
-
-  <div class="webmentions_cont">
     {# Get the webmentions for the current page #}
     {%- set currentPostMentions = webmentions | webmentionsForPage -%}
     {%- set mentionCount = webmentions | webmentionCountForPage -%}
     
     {% if mentionCount > 0 %}
-      <h3>Webmentions ({{ mentionCount }})</h3>
+      <div class="webmentions_cont">
+      <h2 class="h3">Webmentions ({{ mentionCount }})</h2>
       
       {# Comments/Replies #}
       {% if currentPostMentions.comments and currentPostMentions.comments.length > 0 %}
-        <h4>Comments</h4>
+        <h3 class="h5">Comments</h3>
         <ol id="webmentions-comments" class="webmentions__list">
           {% for mention in currentPostMentions.comments %}
             <li class="webmentions__item">
@@ -102,8 +87,28 @@ schema: BlogPosting
           {% endfor %}
         </ol>
       {% endif %}
+      </div>
     {% endif %}
+
+
   </div>
+
+    
+
+
+  <!--  h-card infos: https://indieweb.org/authorship -->
+  <div hidden class="h-entry">
+    <a class="u-url dt-published" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
+    <a class="p-author" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
+    <img
+      eleventy:ignore
+      class="u-photo"
+      src="{{ meta.author.avatar | url | absoluteUrl(meta.url) }}"
+      alt="{{ meta.author.name }}"
+    />
+  </div>
+
+  
 </article>
 
 {%- css "local" -%}
