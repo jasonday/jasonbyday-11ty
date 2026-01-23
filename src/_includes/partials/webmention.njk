@@ -87,6 +87,10 @@
         
         {% if mentionType == 'repost-of' %}
           <p class="webmention__action">Shared this</p>
+        {% elif mentionType == 'bookmark-of' %}
+          <p class="webmention__action">Bookmarked this</p>
+        {% endif %}
+        
         {% if mention.published %}
           <time class="webmention__date" datetime="{{ mention.published }}">
             {{ mention.published | formatDate('MMM D, YYYY') }}
@@ -124,10 +128,6 @@
             {{ mention.published | formatDate('MMM D, YYYY') }}
           </time>
         {% endif %}
-      </div>
-    </div>
-  {% endif %}
-{% endif %}endif %}
       </div>
     </div>
   {% endif %}

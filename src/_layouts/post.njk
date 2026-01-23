@@ -75,7 +75,7 @@ schema: BlogPosting
         <ol id="webmentions-comments" class="webmentions__list">
           {% for mention in currentPostMentions.comments %}
             <li class="webmentions__item">
-              {% include 'partials/webmention.njk' %}
+              {% set mention = mention %}{% include 'partials/webmention.njk' %}
             </li>
           {% endfor %}
         </ol>
@@ -86,7 +86,7 @@ schema: BlogPosting
         <h4>Likes ({{ currentPostMentions.likes.length }})</h4>
         <div class="webmentions__likes">
           {% for mention in currentPostMentions.likes %}
-            {% include 'partials/webmention.njk' %}
+            {% set mention = mention %}{% include 'partials/webmention.njk' %}
           {% endfor %}
         </div>
       {% endif %}
@@ -97,7 +97,7 @@ schema: BlogPosting
         <ol id="webmentions-reposts" class="webmentions__list">
           {% for mention in currentPostMentions.reposts %}
             <li class="webmentions__item">
-              {% include 'partials/webmention.njk' %}
+              {% set mention = mention %}{% include 'partials/webmention.njk' %}
             </li>
           {% endfor %}
         </ol>
