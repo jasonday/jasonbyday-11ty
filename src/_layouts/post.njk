@@ -64,14 +64,44 @@ schema: BlogPosting
   <div class="webmentions_cont">
     {# Get the webmentions for the current page #}
     {%- set currentPostMentions = webmentions | webmentionsForPage -%}
-    {% if currentPostMentions.length > 0 %}
-    <ol id="webmentions">
-      {% for mention in currentPostMentions %}
-          <li class="webmentions__item">
-              {% include 'webmention.njk' %}
-          </li>
-      {% endfor %}
-    </ol>
+    {%- set mentionCount = webmentions | webmentionCountForPage -%}
+    
+    {% if mentionCount > 0 %}
+      <h3>Webmentions ({{ mentionCount }})</h3>
+      
+      {# Comments/Replies #}
+      {% if currentPostMentions.comments and currentPostMentions.comments.length > 0 %}
+        <h4>Comments</h4>
+        <ol id="webmentions-comments" class="webmentions__list">
+          {% for mention in currentPostMentions.comments %}
+            <li class="webmentions__item">
+              {% include 'partials/webmention.njk' %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+      
+      {# Likes #}
+      {% if currentPostMentions.likes and currentPostMentions.likes.length > 0 %}
+        <h4>Likes ({{ currentPostMentions.likes.length }})</h4>
+        <div class="webmentions__likes">
+          {% for mention in currentPostMentions.likes %}
+            {% include 'partials/webmention.njk' %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      {# Reposts #}
+      {% if currentPostMentions.reposts and currentPostMentions.reposts.length > 0 %}
+        <h4>Reposts ({{ currentPostMentions.reposts.length }})</h4>
+        <ol id="webmentions-reposts" class="webmentions__list">
+          {% for mention in currentPostMentions.reposts %}
+            <li class="webmentions__item">
+              {% include 'partials/webmention.njk' %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
     {% endif %}
   </div>
 </article>
