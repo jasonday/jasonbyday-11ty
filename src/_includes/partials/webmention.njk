@@ -1,0 +1,130 @@
+{# Webmention partial - displays individual webmention entries #}
+{% if mention %}
+  {% set mentionType = mention['wm-property'] %}
+  
+  {% if mentionType == 'in-reply-to' %}
+    {# Reply/Comment #}
+    <div class="webmention webmention--reply">
+      {% if mention.author %}
+        <img 
+          class="webmention__avatar" 
+          src="{{ mention.author.photo }}" 
+          alt="{{ mention.author.name }}"
+          loading="lazy"
+          decoding="async"
+        />
+      {% endif %}
+      
+      <div class="webmention__content">
+        <h4 class="webmention__author">
+          {% if mention.author.url %}
+            <a href="{{ mention.author.url }}" class="webmention__link">
+              {{ mention.author.name }}
+            </a>
+          {% else %}
+            {{ mention.author.name }}
+          {% endif %}
+        </h4>
+        
+        {% if mention.published %}
+          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+            {{ mention.published | formatDate('MMM D, YYYY') }}
+          </time>
+        {% endif %}
+        
+        {% if mention.content %}
+          <p class="webmention__text">{{ mention.content.text }}</p>
+        {% endif %}
+        
+        <a href="{{ mention.url }}" class="webmention__source-link">View on source</a>
+      </div>
+    </div>
+    
+  {% elif mentionType == 'like-of' %}
+    {# Like #}
+    <div class="webmention webmention--like">
+      {% if mention.author %}
+        <a href="{{ mention.author.url }}" class="webmention__like-link">
+          <img 
+            class="webmention__avatar webmention__avatar--small" 
+            src="{{ mention.author.photo }}" 
+            alt="{{ mention.author.name }}"
+            loading="lazy"
+            decoding="async"
+            title="{{ mention.author.name }} liked this"
+          />
+        </a>
+      {% endif %}
+    </div>
+    
+  {% elif mentionType == 'repost-of' or mentionType == 'bookmark-of' %}
+    {# Repost/Share or Bookmark #}
+    <div class="webmention webmention--{{ mentionType }}">
+      {% if mention.author %}
+        <img 
+          class="webmention__avatar" 
+          src="{{ mention.author.photo }}" 
+          alt="{{ mention.author.name }}"
+          loading="lazy"
+          decoding="async"
+        />
+      {% endif %}
+      
+      <div class="webmention__content">
+        <h4 class="webmention__author">
+          {% if mention.author.url %}
+            <a href="{{ mention.author.url }}" class="webmention__link">
+              {{ mention.author.name }}
+            </a>
+          {% else %}
+            {{ mention.author.name }}
+          {% endif %}
+        </h4>
+        
+        {% if mentionType == 'repost-of' %}
+          <p class="webmention__action">Shared this</p>
+        {% elif mentionType == 'bookmark-of' %}
+          <p class="webmention__action">Bookmarked this</p>
+        {% endif %}
+        
+        {% if mention.published %}
+          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+            {{ mention.published | formatDate('MMM D, YYYY') }}
+          </time>
+        {% endif %}
+      </div>
+    </div>
+    
+  {% else %}
+    {# Default/Generic webmention #}
+    <div class="webmention webmention--generic">
+      {% if mention.author %}
+        <img 
+          class="webmention__avatar" 
+          src="{{ mention.author.photo }}" 
+          alt="{{ mention.author.name }}"
+          loading="lazy"
+          decoding="async"
+        />
+      {% endif %}
+      
+      <div class="webmention__content">
+        <h4 class="webmention__author">
+          {% if mention.author.url %}
+            <a href="{{ mention.author.url }}" class="webmention__link">
+              {{ mention.author.name }}
+            </a>
+          {% else %}
+            {{ mention.author.name }}
+          {% endif %}
+        </h4>
+        
+        {% if mention.published %}
+          <time class="webmention__date" datetime="{{ mention.published | toIsoString }}">
+            {{ mention.published | formatDate('MMM D, YYYY') }}
+          </time>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
