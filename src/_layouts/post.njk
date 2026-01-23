@@ -64,6 +64,15 @@ schema: BlogPosting
   <div class="webmentions_cont">
     {# Get the webmentions for the current page #}
     {%- set currentPostMentions = webmentions | webmentionsForPage -%}
+    {% if currentPostMentions.length > 0 %}
+    <ol id="webmentions">
+      {% for mention in currentPostMentions %}
+          <li class="webmentions__item">
+              {% include 'webmention.njk' %}
+          </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
   </div>
 </article>
 
